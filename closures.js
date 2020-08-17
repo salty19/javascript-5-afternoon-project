@@ -23,14 +23,12 @@ function outer() {
 */
   
 // Code Here
-
-
+const inner = outer()
 
 //Once you do that, invoke inner.
 
 //Code Here
-
-
+invoke()
 
 ////////// PROBLEM 2 //////////
 
