@@ -89,10 +89,15 @@ function makeCounter() {
 
 function counterFactory(value) {
   // Code here.
-
+  
   return {
-
-  };
+    inc: function(){
+     return value += 1
+  },
+    dec: function() {
+      return value -= 1
+    }
+  }  
 }
 
 counter = counterFactory(10);
