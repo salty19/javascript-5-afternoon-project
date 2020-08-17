@@ -119,7 +119,7 @@ class ProgressiveManager extends Manager {
       return this.title = 'Manager' 
     } else if (this.reports.length >= 51 && this.reports.length <= 100) {
       return this.title = 'Manager Plus' 
-    } else if {
+    } else {
       return this.title = 'Bestest Manager' 
     }
   }
@@ -157,4 +157,27 @@ const newProg = new ProgressiveManager()
 
 //Code Here
 
+class Machine {
+  constructor(){
+    this.widgets_made_count = 0
+    this.wear_and_tear_count = 0
+    this.needs_reboot = false
+  }
+
+  makeWidgets(num) {
+    this.widgets_made_count += num
+    this.wear_and_tear_count = Math.floor(this.widgets_made_count / 50)
+  }
+
+  fixMachine() {
+    this.needs_reboot = true
+  }
+
+  reboot(){
+    return () => {
+      this.wear_and_tear_count -= 10
+      this.needs_reboot = false
+    }
+  }
+}
 
