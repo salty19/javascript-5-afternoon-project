@@ -159,6 +159,8 @@ var module = (function() {
     }
 })();
 
+/* publicMethod()
+{return privateMethod()} */
 
 
 ////////// PROBLEM 7 //////////
@@ -175,6 +177,12 @@ function secretNumber() {
 
   return {
     // Code here
+    addToSecret(num){
+      return secret += num
+    },
+    takeAwayFromSecret(num2){
+      return secret -= num2
+    }
   };
 }
 
@@ -199,10 +207,17 @@ function secretNumber() {
 */
 
 function timeOutCounter() {
+
   for (var i = 0; i <= 5; i++) {
+    
+    closure = function() {
+      let x = i;
+
     setTimeout(function() {
-      console.log(i);
-    }, i * 1000);
+      console.log(x);
+    }, x * 1000);
+  }
+  closure();
   }
 }
 timeOutCounter();
