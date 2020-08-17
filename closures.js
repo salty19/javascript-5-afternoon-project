@@ -28,7 +28,7 @@ const inner = outer()
 //Once you do that, invoke inner.
 
 //Code Here
-invoke()
+inner()
 
 ////////// PROBLEM 2 //////////
 
@@ -50,8 +50,8 @@ function callFriend(name) {
 */
 
 //Code Here
-
-
+const callJake = callFriend('Jake')
+callJake('435-555-9248')
 
 ////////// PROBLEM 3 //////////
 
