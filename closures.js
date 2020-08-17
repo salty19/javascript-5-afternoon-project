@@ -153,7 +153,10 @@ var module = (function() {
   // outside our lexical scope
   return {
     // Code here.
-  };
+    publicMethod: function(){
+      return privateMethod()
+    }
+    }
 })();
 
 
