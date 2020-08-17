@@ -39,8 +39,7 @@ class Employee {
     this.age = age;
   }
   makeWidget(){
-     `${first_name} ${last_name} Widget`
-    return this
+    return (`${this.first_name} ${this.last_name} Widget`)
   }
 }
 
