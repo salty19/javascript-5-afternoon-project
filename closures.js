@@ -60,15 +60,19 @@ callJake('435-555-9248')
 */
 
 //Code Here
-
-
-
+function makeCounter() {
+  let num = 0;
+  
+  return function () {
+    return num += 1
+  }
+}
 //Uncomment this once you make your function
-//   var count = makeCounter();
-//   count(); // 1
-//   count(); // 2
-//   count(); // 3
-//   count(); // 4
+  var count = makeCounter();
+  count(); // 1
+  count(); // 2
+  count(); // 3
+  count(); // 4
 
 
 
